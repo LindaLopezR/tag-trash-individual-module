@@ -1,0 +1,40 @@
+<template name="tagTrash">
+	<div class="container">
+		<p class="titleCategorie">{{_ "trash"}}</p>
+
+		<div class="row box">
+			{{#if showDeleteCards}}
+				<table class="ui celled table">
+						<thead>
+							<tr>
+								<th>{{_ "type"}}</th>
+								<th>{{_ "classification"}}</th>
+								<th>{{_ "location"}}</th>
+								<th>{{_ "date_deleted"}}</th>
+								<th>{{_ "restore"}}</th>
+								<th>{{_ "delete"}}</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							{{#each getCardDelete}}
+								{{>cardDelete}}
+							{{/each}}
+						</tbody>
+				</table>
+			{{else}}
+				{{>noCardsDelete}}
+			{{/if}}
+		</div>
+	</div>
+</template>
+
+<template name="noCardsDelete">
+	<div class=" NoLeanCard">
+		<i class="big icons">
+			<i class="big iconGray dont icon"></i>
+			<i class="iconGray tags icon"></i>
+		</i>
+		<p>{{_ "there_are_no_cards_trash"}}</p>
+	</div>
+</template>

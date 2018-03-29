@@ -1,0 +1,1 @@
+import './tagTrash/tagTrash.js';

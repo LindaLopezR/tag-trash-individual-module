@@ -1,0 +1,22 @@
+<template name="cardDelete">
+	<tr>
+		<td><i class="large tag icon {{getCardClass type}}"></i></td>
+		<td>{{getCategory category}}</td>
+		<td>{{getLocation location}}</td>
+		<td>{formatDateDelete deleteDate}}</td>
+		<td>
+			<center>
+				<a data-id="{{_id}}" class="circular tiny ui icon button teal" id="btnRestoreCard">
+				<i class="history icon"></i>
+				</a>
+			</center>
+		</td>
+		<td>
+			<center>
+				<a data-id="{{_id}}" class="circular tiny ui icon button red" id="btnDeleteCard">
+				<i class="remove icon"></i>
+				</a>
+			</center>
+		</td>
+	</tr>
+</template>
